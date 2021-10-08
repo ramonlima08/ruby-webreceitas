@@ -1,0 +1,24 @@
+<h1>Show Receita</h1>
+
+
+
+
+
+<article>
+    <header>
+        <h2><%= @recipe.name %></h2>
+    </header>
+    <p>
+        <%= truncate(@recipe.stuff, length:5, separator: ' ') %>
+    </p>
+    <p>
+        <%= formata_caloria(@recipe) %>
+    </p>
+    <p>
+        <%= @recipe.prepare_mode %>
+    </p>
+    <p>
+        <%= number_to_currency(@recipe.cost) %>
+    </p>
+</article>
+        
