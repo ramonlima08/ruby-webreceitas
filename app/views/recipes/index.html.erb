@@ -1,6 +1,11 @@
 <h1>Receitas saborosas</h1>
 
-<p><%= @variavel %></p>
+<%
+=begin%>
+ <p><%= @variavel %></p> 
+<%
+=end%>
+<p><%= pluralize(@recipes.size, "Receita encontrada", "Receitas encontradas") %> </p>
 
 
 <ul>
@@ -10,10 +15,10 @@
                 <h2><%= recipe.name %></h2>
             </header>
             <p>
-                <%= recipe.stuff %>
+                <%= truncate(recipe.stuff, length:5, separator: ' ') %>
             </p>
             <p>
-                <%= recipe.calories %>
+                <%= formata_caloria(recipe) %>
             </p>
             <p>
                 <%= recipe.prepare_mode %>
