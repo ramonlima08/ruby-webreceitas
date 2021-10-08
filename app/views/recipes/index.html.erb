@@ -5,10 +5,24 @@
 
 <ul>
     <% @recipes.each do |recipe| %>
-        <li>
-            <%= recipe.name %>
-            <%= recipe.stuff %>
-            <%= recipe.calories %>
-        </li>
+        <article>
+            <header>
+                <h2><%= recipe.name %></h2>
+            </header>
+            <p>
+                <%= recipe.stuff %>
+            </p>
+            <p>
+                <%= recipe.calories %>
+            </p>
+            <p>
+                <%= recipe.prepare_mode %>
+            </p>
+            <p>
+                <%= number_to_currency(recipe.cost) %>
+            </p>
+        </article>
+        
+        
     <%end %>
 </ul>

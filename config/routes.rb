@@ -6,3 +6,12 @@ Rails.application.routes.draw do
   resources :recipes
 
 end
+
+#commands 
+
+#Migration (atenção, seguir as convenções, nome da migrate singular em ingles)
+#rails g migration {Name} field field_text:text number:integer amount:decimal
+#rails g migration AddNewFieldsTo{Name} bigtext:text field_two fields:integer
+
+#Exec migratinos
+#rake db:migrate
