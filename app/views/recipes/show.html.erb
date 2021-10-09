@@ -7,7 +7,12 @@
 <article>
     <header>
         <h2><%= @recipe.name %></h2>
+        <%= imagem(@recipe) %>
     </header>
+
+    <p>
+       <%=  @recipe.kind %>
+    </p>
     <p>
        <%=  @recipe.stuff %>
     </p>
@@ -16,6 +21,15 @@
     </p>
     <p>
         <%= @recipe.prepare_mode %>
+    </p>
+    <p>
+       <%=  @recipe.duration %>
+    </p>
+    <p>
+        <%= pluralize(@recipe.portion,'Porção',' Porções') %>
+    </p>
+    <p>
+       <%=  @recipe.stuff %>
     </p>
     <p>
         <%= number_to_currency(@recipe.cost) %>

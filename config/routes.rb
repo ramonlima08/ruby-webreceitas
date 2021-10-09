@@ -18,6 +18,9 @@ end
 
 #Exec migratinos
 #rake db:migrate
+#rake db:rollback #desfaz a ultima migração
+#rake db:seed
+#rake db:reset #limpa,cria mas migracoes e roda seed
 
 #Controller
 #rails g controller {Name}

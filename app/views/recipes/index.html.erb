@@ -14,9 +14,13 @@
         <article>
             <header>
                 <h2> <%= link_to recipe.name, recipe %> </h2>
+                <%= imagem(recipe) %>
             </header>
             <p>
                 <%= truncate(recipe.stuff, length:30, separator: ' ') %>
+            </p>
+            <p>
+                <%= recipe.duration %> min
             </p>
             <p>
                 <%= formata_caloria(recipe) %>
