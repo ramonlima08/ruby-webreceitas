@@ -1,0 +1,24 @@
+<h1>Exercícios</h1>
+
+
+<h3>Hash / similar a Objeto Json</h3>
+
+<p><%= @recipes[:name] %></p>
+<p> EACH </p>
+
+
+<ul>
+    <% @recipes.each do | k,v | %>
+    <li>
+        <%= "Chave '#{k.upcase}' pertence ao valor #{v} ." %>
+    </li>
+    <% end %>
+</ul>
+
+<p><%= @recipes.empty? %> (verifica se o HASH está vazio  = empty?)</p>
+<p><%= @recipes.has_key?(:name) %> (verifica se existe a chave = has_key?(:name))</p>
+<p><%= @recipes.has_value?('Sopa') %> (verifica se existe o valor = has_value?('Sopa'))</p>
+<p><%= @recipes.length %> (verifica o tamanho = length)</p>
+<p><%= @recipes.delete(:nome) %> (exclui um elemento = delete(:nome))</p>
+
+<p><%= @valorDaFuncao %> (retorno de uma função)</p>

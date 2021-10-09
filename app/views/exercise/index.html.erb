@@ -1,0 +1,29 @@
+<h1>Exercícios</h1>
+
+<p><%= @message %></p>
+<p><%= @message2 %></p>
+
+<h3>Arrays</h3>
+<p><%= @frutas %></p>
+<p><%= @frutas[1] %> (chave 1)</p>
+<p><%= @frutas.first %> (primeiro)</p>
+<p><%= @frutas.last %> (ultimo)</p>
+<p><%= @frutas.length %> (tamanho = length)</p>
+<p><%= @frutas.empty? %> (verifica se está vazio = empty?)</p>
+<p><%= @frutas.include?('limão') %> (busca/verifica um elemento = include?)</p>
+<p><%= @frutas.push('limão') %> (add um elemento = push)</p>
+<p><%= @frutas << 'pera' %> (add um elemento = << )</p>
+<p><%= @frutas.insert(1,'manga') %> (add um elemento = insert(position,element) )</p>
+<p><%= @frutas.pop %> (remove ultimo elemento = pop )</p>
+<p><%= @frutas.delete('manga') %> (remove um elemento específico = delete )</p>
+<p>each / for / foreach</p>
+<ul>
+    <% @frutas.each do |fruta| %>
+    <li>
+        <%= fruta %>
+    </li>
+    <% end %>
+</ul>
+<p><%= @frutas.join('-') %> (junta os elementos em uma string = join )</p>
+
+<p><%= @novoArray %> (novo array  (0..5).to_a )</p>

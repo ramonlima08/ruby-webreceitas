@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'recipes#index'
   resources :recipes
 
+  get "exercise/str" => "exercise#index"
+  get "exercise/hash" => "exercise#hash"
+
 end
 
 #commands 
@@ -15,3 +18,6 @@ end
 
 #Exec migratinos
 #rake db:migrate
+
+#Controller
+#rails g controller {Name}
