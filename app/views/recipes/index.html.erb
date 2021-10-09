@@ -7,6 +7,7 @@
 =end%>
 <p><%= pluralize(@recipes.size, "Receita encontrada", "Receitas encontradas") %> </p>
 
+<%= link_to "Nova Receita", new_recipe_path %>
 
 <ul>
     <% @recipes.each do |recipe| %>
@@ -31,3 +32,4 @@
         
     <%end %>
 </ul>
+
