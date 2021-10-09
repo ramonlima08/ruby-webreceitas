@@ -9,7 +9,7 @@
         <h2><%= @recipe.name %></h2>
     </header>
     <p>
-        <%= truncate(@recipe.stuff, length:5, separator: ' ') %>
+       <%=  @recipe.stuff %>
     </p>
     <p>
         <%= formata_caloria(@recipe) %>
@@ -23,3 +23,4 @@
 </article>
         
 <%= link_to "Retornar para receitas", recipes_path %>
+<%= link_to "Editar", edit_recipe_path(@recipe) %>
