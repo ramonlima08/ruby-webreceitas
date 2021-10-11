@@ -8,11 +8,11 @@ module RecipesHelper
         end
     end
 
-    def imagem(recipe)
+    def imagem(recipe, size)
         if recipe.poster.blank?
             "sem imagem"
         else
-            image_tag(recipe.poster)
+            image_tag(recipe.poster, size: size)
         end
 
     end
