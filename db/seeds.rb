@@ -16,7 +16,7 @@ Recipe.create!([
         portion: "5",
         duration: "2021-01-01 00:40:00",
         cost: 50.00,
-        poster: "salda.jpg",
+        poster: "",
     },
     {
         name:"Salada Light 2",
@@ -27,6 +27,13 @@ Recipe.create!([
         portion: "10",
         duration: "2021-01-01 00:50:00",
         cost: 70.00,
-        poster: "salda2.jpg",
+        poster: "",
     }
 ])
+
+receita = Recipe.find_by(name: 'Salada Light')
+receita.comments.create!(name: 'Paulo Xavier', rating: 5, comment: "Muito bom, fácil e prático")
+receita.comments.create!(name: 'Jorge Silva', rating: 4, comment: "Facil e barato")
+
+receita = Recipe.find_by(name: 'Salada Light 2')
+receita.comments.create!(name: 'Marta Barros', rating: 3, comment: "Receita até é boa, mais faltou alguma coisa")
