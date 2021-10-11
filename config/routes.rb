@@ -24,3 +24,11 @@ end
 
 #Controller
 #rails g controller {Name}
+
+#Rodar o server em outra porta
+#rails s -p 4000
+
+#Ao mexer no GEMGILE rodar o bundle
+#bundle instal --without production
+
+#Ao add novos assets tem q reestartar a aplicação
