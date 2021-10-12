@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :comments
+  #resources :comments
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   #get "recipes" => "recipes#index"
   root 'recipes#index'
-  resources :recipes
+  resources :recipes do 
+    resources :comments
+  end
 
   get "exercise/str" => "exercise#index"
   get "exercise/hash" => "exercise#hash"
@@ -16,6 +18,10 @@ end
 #Migration (atenção, seguir as convenções, nome da migrate singular em ingles)
 #rails g migration {Name} field field_text:text number:integer amount:decimal
 #rails g migration AddNewFieldsTo{Name} bigtext:text field_two fields:integer
+
+#Migration + Models + Controller + Routes com relacionamento 1xn
+#Resource de commendarios para a tabela de Receitas
+#rails g resource comment name:string rate:integer comment:text recipe:reference
 
 #Exec migratinos
 #rake db:migrate
