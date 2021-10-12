@@ -50,11 +50,11 @@
         <hr />
 
         <%= link_to new_recipe_comment_path(@recipe), class:'btn btn-link' do %>
-            <i class="glyphicon glyphicon-add"> Add Comentário </i>
+            <i class="glyphicon glyphicon-plus"> Add Comentário </i>
         <% end %>
 
         <%= link_to recipe_comments_path(@recipe), class:'btn btn-link' do %>
-            <i class="glyphicon glyphicon-trash"> <%= pluralize(@recipe.comments.size, 'Comentário', 'Comentários') %> </i>
+            <i class="glyphicon glyphicon-eye-open"> <%= pluralize(@recipe.comments.size, 'Comentário', 'Comentários') %> </i>
         <% end %>
 
     </div>
